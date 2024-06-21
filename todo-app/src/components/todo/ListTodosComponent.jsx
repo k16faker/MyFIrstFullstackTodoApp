@@ -50,7 +50,10 @@ const ListTodosComponent = () => {
     function updateTodo(id) {
       console.log("clicked" + id);
       navigate(`/todo/${id}`);
-      
+    }
+
+    function addNewTodo(id) {
+      navigate(`/todo/-1`);
     }
 
   
@@ -81,6 +84,7 @@ const ListTodosComponent = () => {
               ))}
             </tbody>
           </table>
+          <div className="btn btn-success m-5" onClick={addNewTodo}>Add New Todo</div>
         </div>
       </div>
     );
